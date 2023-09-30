@@ -1,9 +1,15 @@
-import java.util.ArrayList;
-
 public class DetalleOrden {
     private int cantidad;
     private Articulo articulo;
+    private ListaArticulos lista;
+    private float precioTotal;
     public DetalleOrden(int cantidad,Articulo articulo){
+        this.precioTotal=0;
+        this.lista=new ListaArticulos();
+        for(int i=1;i<=cantidad;i++){
+            lista.agregar(articulo);
+            precioTotal+=articulo.getPrecio();
+        }
         this.cantidad=cantidad;
         this.articulo=articulo;
     }
@@ -11,10 +17,10 @@ public class DetalleOrden {
         return calcPrecioSinIva()+calcIva();
     }
     public float calcPrecioSinIva(){
-        return articulo.getPrecio()*cantidad;
+        return precioTotal;
     }
     public float calcIva(){
-        return calcPrecioSinIva()*0.19f;
+        return precioTotal*0.19f;
     }
     public float calcPeso(){
         return articulo.getPeso()*cantidad;

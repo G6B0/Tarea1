@@ -1,20 +1,24 @@
+import java.time.LocalDate;
 public class OrdenCompra {
-    private String fecha;
-    private String estado;
-    private DetalleOrden serieorden;
+    private LocalDate Fecha;
+    private String Estado;
+    private ListaDetalles detallesOrdenes;
     private Cliente usuario;
-    public OrdenCompra(Cliente usuario){
+    private int Cantidad;
+    public OrdenCompra(Cliente usuario, LocalDate fecha, Articulo art1, int cantidad){
+        detallesOrdenes= new ListaDetalles();
+       detallesOrdenes.agregarOrden(new DetalleOrden(cantidad,art1));
         this.usuario=usuario;
-        estado="falta pago";
-        fecha="xx/xx/xx";
+        Estado="falta pago";
+        Fecha=fecha;
 
     }
 
     public String getEstado() {
-        return estado;
+        return Estado;
     }
 
-    public String getFecha() {
-        return fecha;
+    public LocalDate getFecha() {
+        return Fecha;
     }
 }
