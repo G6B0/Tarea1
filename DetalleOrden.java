@@ -3,7 +3,7 @@ public class DetalleOrden {
     private Articulo articulo;
     private ListaArticulos lista;
     private float precioTotal;
-    public DetalleOrden(int cantidad,Articulo articulo){
+    public DetalleOrden(int cantidad, Articulo articulo){
         this.precioTotal=0;
         this.lista=new ListaArticulos();
         for(int i=1;i<=cantidad;i++){
