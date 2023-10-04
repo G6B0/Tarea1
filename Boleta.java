@@ -1,7 +1,12 @@
 import java.time.LocalDate;
 
 public class Boleta extends DocTributario {
-    public Boleta(String rut, String numero, LocalDate fecha) {
-        super(rut, numero, fecha);
+    OrdenCompra Orden;
+    private String NumeroBoleta;
+    private Pago MedioPago;
+    private int Plazos;
+    public Boleta(Cliente cliente, String numero, LocalDate fecha, OrdenCompra orden) {
+        super(cliente,fecha,orden);
     }
+
 }

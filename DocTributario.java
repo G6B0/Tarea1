@@ -1,12 +1,15 @@
 import java.time.LocalDate;
 
-public abstract class DocTributario {
-    private String Numero;
+    public class DocTributario {
+        private Direccion Direccion;
     private String Rut;
     private LocalDate Fecha;
-public DocTributario(String rut, String numero, LocalDate fecha){
-    this.Numero=numero;
-    this.Rut=rut;
-    this.Fecha=fecha;
-}
+    private OrdenCompra OrdenDeCompra;
+public DocTributario(Cliente cliente, LocalDate fecha,OrdenCompra orden){
+    this.OrdenDeCompra=orden;
+    this.Rut=cliente.getRut();
+    this.Direccion = new Direccion(cliente.getDireccionCliente());
+    this.Fecha=orden.getFecha();
+ }
+
 }

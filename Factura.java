@@ -1,7 +1,11 @@
 import java.time.LocalDate;
 
 public class Factura extends DocTributario {
-    public Factura(String rut, String numero, LocalDate fecha) {
-        super(rut, numero, fecha);
+    private String NumeroFactura;
+    private int Plazos;
+    private Pago MedioPago;
+    public Factura(Cliente cliente, String numero, LocalDate fecha, OrdenCompra orden) {
+        super(cliente, fecha,orden);
+        this.NumeroFactura=numero;
     }
 }
