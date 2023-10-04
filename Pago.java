@@ -1,15 +1,17 @@
 import java.time.LocalDate;
-class Pago{
-    private float monto;
-    private LocalDate fecha;
-    public Pago(float monto1, LocalDate fecha1){
-        this.monto=monto1;
-        this.fecha=fecha1;
+abstract class Pago{
+    private float Monto;
+    private LocalDate FechaDePago;
+    private OrdenCompra OrdenAsociada;
+    public Pago(LocalDate fecha, OrdenCompra orden){
+        this.Monto = orden.calcPrecio();
+        this.FechaDePago=fecha;
+        this.OrdenAsociada=orden;
     }
     public float getMonto() {
-        return monto;
+        return Monto;
     }
     public LocalDate getFecha() {
-        return fecha;
+        return FechaDePago;
     }
 }

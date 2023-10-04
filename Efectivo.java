@@ -1,12 +1,18 @@
 import java.time.LocalDate;
 
-class Efectivo extends Pago{
-private OrdenCompra orden;
-    public Efectivo(float monto1, LocalDate fecha1) {
-        super(monto1, fecha1);
-    }
-    public float calDevolcion(){
-        return super.getMonto()-orden.calcPrecio();
+class Efectivo extends Pago {
+    private float pagado;
+
+    public Efectivo(float cuanto, LocalDate fecha, OrdenCompra orden) {
+        super(fecha, orden);
+        this.pagado = cuanto;
     }
 
+    public float calcularDevolucion() {
+        if (pagado >= super.getMonto()) {
+            return pagado - super.getMonto();
+        } else {
+            return pagado;
+        }
+    }
 }
