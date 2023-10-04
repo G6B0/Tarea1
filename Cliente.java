@@ -1,19 +1,28 @@
 import java.util.ArrayList;
 public class Cliente {
-    private String nombre;
-    private String rut;
-    private Direccion direccion;
-    private ArrayList<OrdenCompra> compras;
-    public Cliente(String nombre,String rut){
-        this.nombre=nombre;
-        this.rut=rut;
+    private String Nombre;
+    private String Rut;
+    private Direccion DireccionCliente;
+    private ArrayList<OrdenCompra> Compras;
+    public Cliente(String nombre,String rut, Direccion direccion){
+        this.Compras=new ArrayList<>();
+        this.Nombre=nombre;
+        this.Rut=rut;
+        this.DireccionCliente=direccion;
     }
+ public void AgregarOrden(OrdenCompra ordenx){
+     Compras.add(ordenx);
+ }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public String getRut() {
-        return rut;
+        return Rut;
     }
+    public String getDireccionCliente(){
+        return DireccionCliente.getDireccion();
+    }
+
 }

@@ -1,28 +1,22 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class OrdenCompra {
     private LocalDate Fecha;
     private String Estado;
-    private ListaDetalles Detalles;
+    private ArrayList<DetalleOrden> Detalles;
     private Cliente Usuario;
     private float SumaTotal;
     private float PesoTotal;
-    public OrdenCompra(Cliente usuario, LocalDate fecha, Articulo articulo, int cantidad){
+    private DocTributario DocumentoTributario;
+    private Pago MedioPago;
+    public OrdenCompra(Cliente usuario, LocalDate fecha){
         this.SumaTotal=0;
         this.PesoTotal=0;
         this.Usuario=usuario;
-        Estado="falta pago";
-        Fecha=fecha;
-        Detalles= new ListaDetalles();
-        Detalles.agregarOrden(new DetalleOrden(cantidad,articulo));
-        while (true) {
-             DetalleOrden detalleX = Detalles.devolverOrden();
-            if (detalleX != null) {
-                this.SumaTotal += detalleX.calcPrecioSinIva();
-                this.PesoTotal += detalleX.calcPeso();
-            } else {
-                break;
-            }
-        }
+        this.Estado="falta pago";
+        this.Fecha=fecha;
+        this.Detalles = new ArrayList<>();
     }
     public float calcPrecio(){
         return calcPrecioSinIva()+calcIva();
@@ -43,4 +37,11 @@ public class OrdenCompra {
     public LocalDate getFecha() {
         return Fecha;
     }
+    public void agregarDetalle(DetalleOrden detalle) {
+        Detalles.add(detalle);
+        this.SumaTotal += detalle.calcPrecioSinIva();
+        this.PesoTotal += detalle.calcPeso();
+    }
+
+
 }
