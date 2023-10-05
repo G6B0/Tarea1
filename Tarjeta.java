@@ -1,19 +1,15 @@
 import java.time.LocalDate;
-
 class Tarjeta extends Pago{
-    private String Tipo;
-    private int Plazos;
-    private String numTransaccion;
-    private float montoapagar;
-    public Tarjeta(String tipo, String numTransaccion, int plazos, LocalDate fecha, OrdenCompra orden){
-        super(fecha,orden);
-        this.Tipo=tipo;
-        this.numTransaccion=numTransaccion;
-        this.Plazos=plazos;
-        montoapagar=getMonto()-Plazos;
+    private String tipo;
+    private String NumTransaccion;
+    public Tarjeta(Cliente Titular, String tipo){
+        super();
+        this.tipo=tipo;
     }
-    public void AgregarPlazo(int pagonuevo,LocalDate fecha){
-        montoapagar= montoapagar-pagonuevo;
-        fecha = LocalDate.now();
+    public LocalDate FechaPago(LocalDate fechapago){
+        return fechapago;
+    }
+    public float Pago(float pago){
+        return pago;
     }
 }

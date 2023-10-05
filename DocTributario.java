@@ -1,15 +1,13 @@
 import java.time.LocalDate;
-
-    public class DocTributario {
-        private Direccion Direccion;
-    private String Rut;
-    private LocalDate Fecha;
-    private OrdenCompra OrdenDeCompra;
-public DocTributario(Cliente cliente, LocalDate fecha,OrdenCompra orden){
-    this.OrdenDeCompra=orden;
-    this.Rut=cliente.getRut();
-    this.Direccion = new Direccion(cliente.getDireccionCliente());
-    this.Fecha=orden.getFecha();
- }
-
+public class DocTributario {
+    private Direccion direccion;
+    private String rut;
+    private LocalDate fecha;
+    private OrdenCompra ordenDeCompra;
+    public DocTributario(Cliente cliente, LocalDate fecha){
+        this.ordenDeCompra=new OrdenCompra(cliente,fecha,this);
+        this.rut=cliente.getRut();
+        this.direccion = new Direccion(cliente.getDireccionCliente());
+        this.fecha=ordenDeCompra.getFecha();
+    }
 }

@@ -1,47 +1,55 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-
 public class OrdenCompra {
-    private LocalDate Fecha;
-    private String Estado;
-    private ArrayList<DetalleOrden> Detalles;
-    private Cliente Usuario;
-    private float SumaTotal;
-    private float PesoTotal;
-    private DocTributario DocumentoTributario;
-    private Pago MedioPago;
-    public OrdenCompra(Cliente usuario, LocalDate fecha){
-        this.SumaTotal=0;
-        this.PesoTotal=0;
-        this.Usuario=usuario;
-        this.Estado="falta pago";
-        this.Fecha=fecha;
-        this.Detalles = new ArrayList<>();
+    private LocalDate fecha;
+    private String estado;
+    private ArrayList<DetalleOrden> detalles;
+    private Cliente cliente;
+    private float sumaTotal;
+    private float pesoTotal;
+    private DocTributario documentoTributario;
+    private Pago medioDePago;
+    public OrdenCompra(Cliente cliente, LocalDate fecha, DocTributario documento){
+        this.sumaTotal =0;
+        this.pesoTotal =0;
+        this.cliente=cliente;
+        if(this.sumaTotal ==0){
+            this.estado="Pagado";
+            this.documentoTributario=documento;
+        }else{
+            this.estado="No pagado";
+            this.documentoTributario=null;
+        }
+        this.fecha = fecha;
+        this.detalles = new ArrayList<>();
     }
     public float calcPrecio(){
         return calcPrecioSinIva()+calcIva();
     }
     public float calcPrecioSinIva(){
-        return SumaTotal;
+        return sumaTotal;
     }
     public float calcIva(){
-        return SumaTotal*0.19f;
+        return sumaTotal *0.19f;
     }
     public float calcPeso(){
-        return PesoTotal;
+        return pesoTotal;
     }
     public String getEstado() {
-        return Estado;
+        return estado;
     }
 
     public LocalDate getFecha() {
-        return Fecha;
+        return fecha;
     }
     public void agregarDetalle(DetalleOrden detalle) {
-        Detalles.add(detalle);
-        this.SumaTotal += detalle.calcPrecioSinIva();
-        this.PesoTotal += detalle.calcPeso();
+        detalles.add(detalle);
+        this.sumaTotal += detalle.calcPrecioSinIva();
+        this.pesoTotal += detalle.calcPeso();
     }
-
-
+    public void agregarPlazo(float monto, LocalDate fecha){
+        this.fecha=fecha;
+        this.sumaTotal -=monto;
+    }
 }
+

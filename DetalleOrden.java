@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 
+import java.util.ArrayList;
 public class DetalleOrden {
     private int cantidad;
     private Articulo articulo;
-    private ArrayList<Articulo> ListaArticulos;
+    private ArrayList<Articulo> listaDeArticulos;
     public DetalleOrden(int cantidad, Articulo articulo){
-        this.ListaArticulos=new ArrayList<>();
+        this.listaDeArticulos=new ArrayList<>();
         for(int i=1;i<=cantidad;i++){
-            ListaArticulos.add(articulo);
+            listaDeArticulos.add(articulo);
         }
         this.cantidad=cantidad;
         this.articulo=articulo;

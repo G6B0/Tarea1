@@ -1,28 +1,25 @@
 import java.util.ArrayList;
 public class Cliente {
-    private String Nombre;
-    private String Rut;
-    private Direccion DireccionCliente;
-    private ArrayList<OrdenCompra> Compras;
-    public Cliente(String nombre,String rut, Direccion direccion){
-        this.Compras=new ArrayList<>();
-        this.Nombre=nombre;
-        this.Rut=rut;
-        this.DireccionCliente=direccion;
+    private String nombre;
+    private String rut;
+    private Direccion direccionCliente;
+    private ArrayList<OrdenCompra> pedido;
+    public Cliente(String nombre,String rut, Direccion direccionCliente){
+        this.pedido=new ArrayList<>();
+        this.nombre=nombre;
+        this.rut=rut;
+        this.direccionCliente=direccionCliente;
     }
- public void AgregarOrden(OrdenCompra ordenx){
-     Compras.add(ordenx);
- }
-
+    public void AgregarOrden(OrdenCompra orden){
+        pedido.add(orden);
+    }
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
-
     public String getRut() {
-        return Rut;
+        return rut;
     }
     public String getDireccionCliente(){
-        return DireccionCliente.getDireccion();
+        return direccionCliente.getDireccion();
     }
-
 }

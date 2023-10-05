@@ -1,26 +1,19 @@
 import java.time.LocalDate;
-
+import java.time.LocalDate;
 class Transferencia extends Pago {
 
     private String Banco;
     private String numCuenta;
-    private LocalDate fecha;
-    private float cuant;
-    private float montoapagar;
-
-    public Transferencia(String banco, String numcuenta,LocalDate fecha,OrdenCompra orden, float cuant) {
-        super(fecha, orden);
+    private LocalDate Fecha;
+    public Transferencia(Cliente emisor,String banco, String numcuenta) {
+        super();
         this.Banco = banco;
         this.numCuenta = numcuenta;
-        this.fecha=fecha;
-        this.cuant=cuant;
-        montoapagar= orden.calcPrecio()-cuant;
     }
-    public void AgregarPlazo(int pagonuevo,LocalDate fecha){
-        montoapagar= montoapagar-pagonuevo;
-        fecha =LocalDate.now();
+    public LocalDate FechaPago(LocalDate fechapago){
+        return fechapago;
     }
-    public float getMontoapagar(){
-        return montoapagar;
+    public float Pago(float pago){
+        return pago;
     }
 }
