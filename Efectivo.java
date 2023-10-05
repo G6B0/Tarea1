@@ -15,4 +15,9 @@ class Efectivo extends Pago {
             return monto;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Pago con Efectivo: "+monto;
+    }
 }

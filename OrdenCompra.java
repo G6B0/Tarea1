@@ -51,5 +51,9 @@ public class OrdenCompra {
         this.fecha=fecha;
         this.sumaTotal -=monto;
     }
+    @Override
+    public String toString() {
+        return "Fecha:"+fecha+" "+"Estado del pago:"+estado+" "+"Cliente:"+cliente;
+    }
 }
 

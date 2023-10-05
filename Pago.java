@@ -6,4 +6,8 @@ abstract class Pago{
     private OrdenCompra OrdenAsociada;
     public Pago(){
     }
+    @Override
+    public String toString() {
+        return "Monto a pagar:"+Monto+" "+"Fecha del pago:"+FechaDePago;
+    }
 }

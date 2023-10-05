@@ -12,4 +12,8 @@ class Tarjeta extends Pago{
     public float Pago(float pago){
         return pago;
     }
+    @Override
+    public String toString() {
+        return "Pago con tarjeta tipo:"+tipo;
+    }
 }

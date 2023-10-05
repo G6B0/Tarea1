@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db172992-ed65-481a-8416-0692caf8d20f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Boleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Boleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Articulo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetalleOrden.java" beforeDir="false" afterPath="$PROJECT_DIR$/DetalleOrden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Direccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocTributario.java" beforeDir="false" afterPath="$PROJECT_DIR$/DocTributario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Efectivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efectivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/Factura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrdenCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrdenCompra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pago.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tarjeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transferencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/Transferencia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,21 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/benja/OneDrive/Escritorio/ramos progra/progra 2(java)/tarea1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/benja/OneDrive/Escritorio/ramos progra/progra 2(java)/tarea1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="TareaI" />
@@ -104,16 +109,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Cliente.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

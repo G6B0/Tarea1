@@ -22,4 +22,9 @@ public class Cliente {
     public String getDireccionCliente(){
         return direccionCliente.getDireccion();
     }
+
+    @Override
+    public String toString() {
+        return "Nombre:"+nombre+" "+"Rut:"+rut+" "+"Direccion del Cliente:"+direccionCliente;
+    }
 }

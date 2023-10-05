@@ -6,4 +6,9 @@ public class Direccion {
     public String getDireccion() {
         return direccion;
     }
+
+    @Override
+    public String toString() {
+        return direccion;
+    }
 }

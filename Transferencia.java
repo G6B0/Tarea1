@@ -16,4 +16,9 @@ class Transferencia extends Pago {
     public float Pago(float pago){
         return pago;
     }
+
+    @Override
+    public String toString() {
+        return "Banco asociado:"+Banco+" "+"Numero de Cuenta:"+numCuenta;
+    }
 }

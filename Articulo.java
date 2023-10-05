@@ -35,4 +35,9 @@ public class Articulo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    @Override
+    public String toString() {
+        return "peso:"+peso+" nombre:"+nombre+" descripcion: "+descripcion+" precio: "+precio;
+    }
 }

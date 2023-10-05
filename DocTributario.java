@@ -10,4 +10,9 @@ public class DocTributario {
         this.direccion = new Direccion(cliente.getDireccionCliente());
         this.fecha=ordenDeCompra.getFecha();
     }
+
+    @Override
+    public String toString() {
+        return "Rut:"+rut+" "+"Direccion:"+direccion+" "+"Fecha: "+fecha+" "+"Orden de compra:"+ordenDeCompra;
+    }
 }

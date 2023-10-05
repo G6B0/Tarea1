@@ -25,4 +25,9 @@ public class DetalleOrden {
     public float calcPeso(){
         return articulo.getPeso()*cantidad;
     }
+
+    @Override
+    public String toString() {
+        return "cantidad del articulo:"+cantidad +" "+ articulo;
+    }
 }
